@@ -1,61 +1,138 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}      
+
+body
+{
+  background-color: rgb(22, 13, 8);
 }
 
-a:is(:link, :visited) {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-body {
-  line-height: 1;
-}
-
-.navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.navbar ul li {
-  margin: 0 25px;
-}
-.navbar ul li a {
-  display: block;
-  padding: 14px 20px;
-  color: #fff;
-  text-decoration: none;
-  text-transform: capitalize;
+.text
+{
+  text-align: center;
   font-weight: bold;
+  font-family: Georgia;
+  background-color: #93e993;
+  padding: 6px;
+  font-size: 25px;
+ 
+
+
+
+  
 }
 
-.header {
-  background-color: #333;
+.card
+{
+  background: linear-gradient(rgb(164, 145, 145) , rgb(1, 1, 17));
+  
 }
 
-.col-4 a {
-  font-size: 24px;
+.addBtn
+{
   font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  padding-top: 16px;
-  margin-left: 20px;
+  font-family: Elephant;
+  letter-spacing: 2px;
+
+ 
+  
 }
 
-.col-8 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.cenText {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  font-family: Georgia;
+  font-weight: bold;
+  color: rgb(253, 251, 253);
+  word-spacing: 4px;
+}
+
+.table
+{
+  background-color: rgb(32, 25, 25);
+ 
+}
+
+#title02 {
+  width: 200px;
+  margin:8px auto
+  
+}
+
+.loader
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(225,225,225,0.7);
+  width: 100%;
+  height: 100%;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  white-space: nowrap; 
+}
+
+.table th {
+  background-color: #000000;
+  color: white;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .table th, .table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .table-container {
+    overflow-x: scroll;
+  }
+
+  .loader {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .table th, .table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .table th:nth-child(3),
+  .table td:nth-child(3) {
+    display: none; 
+  }
+
+  .loader {
+    margin-top: 10px;
+  }
 }

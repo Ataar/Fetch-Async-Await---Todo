@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fetch Crud</title>
+    <title>Fetch Async Await - Todo</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -13,33 +13,83 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="row">
-        <div class="col-4">
-          <a href="index.html">LOGO</a>
-        </div>
-        <div class="col-8">
-          <nav class="navbar">
-            <ul>
-              <li><a href="javaScript:;">home</a></li>
-              <li><a href="javaScript:;">gallary</a></li>
-              <li><a href="javaScript:;">about</a></li>
-              <li><a href="javaScript:;">contact</a></li>
-            </ul>
-          </nav>
+    <header class="text">Hey - Todo</header>
+    <div class="text-right m-4">
+      <button class="btn btn-primary addBtn" id="addBtn" type="button">
+        Show Todo
+      </button>
+    </div>
+    <div class="col-md-4 offset-md-4">
+      <div class="card" id="cardShow_Hide">
+        <div class="card-body">
+          <form id="userData">
+            <div class="form-group">
+              <label for="text" class="cenText text-center"
+                >Add Todo Name</label
+              >
+              <input type="text" class="form-control" id="title01" />
+              <!-- <input type="text" class="form-control text-center" placeholder="Enter Boolean Value"  id="title02" /> -->
+              <label for="boolInput"></label>
+              <select id="title02" class="form-control">
+                <option value="" disabled selected>Select_Value</option>
+                <option value="Complete">true</option>
+                <option value="InCompelte">false</option>
+              </select>
+
+              <div class="text-right my-3">
+                <button class="btn btn-primary" id="sBtn" type="submit">
+                  Add Toda data
+                </button>
+                <button class="btn btn-success d-none" id="uBtn" type="button">
+                  Update Toda data
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </header>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div>
+          </div>
+          <div>
+           <div class="table-responsive">
+            <table
+            class="table table-bordered"
+            id="mainTable"
+          >
+            <thead class="text-center text-white">
+              <tr>
+                <th>Sr No</th>
+                <th>Todo Name</th>
+                <th>Status</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableData" class="text-center text-white"></tbody>
+          </table>
+           </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="loader" class="loader">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
+
